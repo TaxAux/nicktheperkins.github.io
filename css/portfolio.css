@@ -54,7 +54,7 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+    color: crimson; /* This ensures all links are blue */
 }
 
 /* Quotation elements */
@@ -64,7 +64,7 @@ q {
 
 /* Image elements */
 img {
-    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    filter: grayscale(10%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 340px; /* Sets the height of all images */
@@ -74,11 +74,11 @@ img {
 }
 
 /* Image element hover effects */
-img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s; /* Transition lasts 1 second */
-	transform: scale(1.1); /* Image is increased slightly when hovered over */
-}
+/*img:hover {
+	/*filter: grayscale(5%); /* Brings back most of the image's color when hovered over */
+    /*ransition: transform 1s; /* Transition lasts 1 second */
+	/*transform: scale(1.1); /* Image is increased slightly when hovered over */
+/*}*/
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
 /* On screens 576px and smaller the images will be 100px tall and centered vertically in the column */
@@ -92,7 +92,8 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 /***** END OF GENERAL STYLING *****/
 
@@ -105,7 +106,7 @@ footer {
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
-    animation: moveNav 5s; /* This applies the moveNav animation for all other browsers */
+    animation: moveNav 2s; /* This applies the moveNav animation for all other browsers */
 }
 
 /* moveNav animation effect for moving the nav bar in from the left of the screen */
@@ -125,8 +126,8 @@ footer {
     font-size: 20px; /* This specifies the font size for text on our navbar */
     text-align: center; /* This centers the text within its container */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveNavText 5.75s; /* Animation for Safari 4.0 - 8.0 */
-    animation: moveNavText 5.75s; /* Applies the moveNavText animation for 5.75s */ 
+    -webkit-animation: moveNavText 2s; /* Animation for Safari 4.0 - 8.0 */
+    animation: moveNavText 2s; /* Applies the moveNavText animation for 5.75s */ 
 }
 
 /* moveNavText animation effect for moving the navbar text from above the view to the navbar */
@@ -145,20 +146,20 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+    background-color: black; /* Defines the background color that will display when you hover over the link */
+    color: crimson; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-color: black;
 }
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
 /* Formatting for background video */
-#Typing_Video {
+#Background_Video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
@@ -168,7 +169,7 @@ footer {
 
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
-    #Typing_Video {
+    #Background_Video {
         display: none;
     }
 }
@@ -180,8 +181,8 @@ footer {
     width: 100%; /* Ensures the video-text container fills the width of the video */
     padding: 20px; /* This adds padding around the video-text container so that the background goes slightly beyond the text */
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
-    -webkit-animation: moveVideoText 5.75s;
-    animation: moveVideoText 5.75s;
+    -webkit-animation: moveVideoText 2s;
+    animation: moveVideoText 2s;
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
@@ -200,7 +201,7 @@ footer {
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 10px;
-    padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+    padding-top: 2%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
     background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
 }
@@ -216,14 +217,14 @@ footer {
     float: left;
     width: 50%;
     padding: 10px;
-    padding-top: 1.9%;
+    padding-top: 2%;
     height: 400px;
-    background-color: #4d4d4d;
+    background-color: black;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
 .Column_tall {
-    padding-top: 3.5%;
+    padding-top: 2%;
     height: 450px;
 }
 
@@ -251,7 +252,7 @@ input[type=text] {
 
 /* Hover effects for input boxes */
 input[type=text]:hover {
-    box-shadow: 0 0 5px #00004d inset; /* This creates a blue shadow in the text box when hovered over by the user */
+    box-shadow: 0 0 5px red inset; /* This creates a blue shadow in the text box when hovered over by the user */
 }
 
 /* Submit button */
@@ -271,8 +272,8 @@ input[type=submit] {
 
 /* Hover effect for submit button */
 input[type=submit]:hover {
-    background-color: white; /* Turns the background of the submit button white when the user hovers over it */
-    color: black; /* Turns the font black when hovered over */
+    background-color: black; /* Turns the background of the submit button white when the user hovers over it */
+    color: crimson; /* Turns the font black when hovered over */
     transform: scale(1.5); /* Makes the button increase 1.5 times in size */
     transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds */
 }
