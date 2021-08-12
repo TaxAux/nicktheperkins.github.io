@@ -10,7 +10,16 @@
 
     <!--Body-->
     <body class="Background">
-        
+
+        <!-- fade-in effect -->
+        <script>
+            document.body.classList.add('fade-out');
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+            });
+        </script>
+        <!-- end fade-in effect -->
+
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
@@ -95,11 +104,11 @@
                 <!--This specifies where and how to send the form data; we are leaving it blank-->
                 <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" placeholder="Please enter your name here" required>
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here" required>
                     <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here" required>
                         <input type="submit" value="SUBMIT">
                 </form>
             </div>
